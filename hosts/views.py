@@ -67,8 +67,8 @@ def bedroom_list_by_host(request, host_pk):
 def bedroom_detail(request, host_pk, bedroom_pk):
   #Retrieve, update or delete a host by id/pk.
     try:
-        bedroom = Bedroom.objects.get(pk = bedroom_pk)
-    except Host.DoesNotExist:
+        bedroom = Bedroom.objects.get(pk = bedroom_pk, host = host_pk)
+    except Bedroom.DoesNotExist:
         return Response(status = status.HTTP_404_NOT_FOUND)
     
     if request.method == 'GET':
