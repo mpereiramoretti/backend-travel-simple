@@ -21,6 +21,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^api/bedrooms/$', hosts_views.bedrooms_list),
     url(r'^api/customers/$', customers_views.customer_list),
     url(r'^api/customers/(?P<pk>[0-9]+)$', customers_views.customers_detail),
     url(r'^api/hosts/$', hosts_views.hosts_list),

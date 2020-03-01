@@ -47,6 +47,16 @@ def host_detail(request, host_pk):
         host.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def bedrooms_list(request):
+    if request.method == 'GET':
+        bedrooms = Bedroom.objects.all()
+        serializer = BedroomSerializer(bedrooms, context ={'request': request}, many = True)
+
+        return Response({
+            'data': serializer.data
+        })
+
 @api_view(['GET', 'POST'])
 def bedroom_list_by_host(request, host_pk):
     if request.method == 'GET':
