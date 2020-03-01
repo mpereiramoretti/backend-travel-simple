@@ -24,4 +24,7 @@ urlpatterns = [
     url(r'^api/customers/$', customers_views.customer_list),
     url(r'^api/customers/(?P<pk>[0-9]+)$', customers_views.customers_detail),
     url(r'^api/hosts/$', hosts_views.hosts_list),
+    url(r'^api/hosts/(?P<host_pk>[0-9]+)$', hosts_views.host_detail),
+    url(r'^api/hosts/(?P<host_pk>[0-9]+)/bedrooms/$', hosts_views.bedroom_list_by_host),
+    url(r'^api/hosts/(?P<host_pk>[0-9]+)/bedrooms/(?P<bedroom_pk>[0-9]+)/$', hosts_views.bedroom_detail),
 ]
