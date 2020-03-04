@@ -10,7 +10,7 @@ Back-end of the application Travel Simple.
 
 ## How to run
 
-Access `backend-travel-simple` project directory from a terminal, run the command `python manage.py runserver 0.0.0.0:8000`. To verify it's working properly, open the URL `http://localhost:8000/api/hosts/<host_number>` or `http://localhost:8000/api/hosts/<host_number>/bedroom/<bedroom_number>` from a browser of your preference.
+Access `backend-travel-simple` project directory from a terminal, run the command `python manage.py migrate`, then the command `python manage.py runserver 0.0.0.0:8000`. To verify it's working properly, open the URL `http://localhost:8000/api/hosts/<host_number>` or `http://localhost:8000/api/hosts/<host_number>/bedroom/<bedroom_number>` from a browser of your preference.
 
 ## How to add data
 
